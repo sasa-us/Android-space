@@ -8,11 +8,15 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void clickFunction(View view) {
+    public void loginClicked(View view) {
         //get content of input
-        EditText myTextField = (EditText) findViewById(R.id.myTextField); //get all id in res find one id=myTextField
+        EditText usernameTextField = (EditText) findViewById(R.id.usernameEditText); //get all id in res find one id=myTextField
+
+        EditText passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+
         //convert view to editText
-        Log.i("Info", myTextField.getText().toString());
+        Log.i("Username", usernameTextField.getText().toString());
+        Log.i("password", passwordEditText.getText().toString());  //must use double quote!
 //        Log.i("Info", "button is pressed");
     }
     @Override
