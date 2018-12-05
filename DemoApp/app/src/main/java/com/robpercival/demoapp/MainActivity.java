@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 //        Log.i("Info", "button is pressed");
 
         Toast.makeText(MainActivity.this, "hi " + usernameTextField.getText().toString(), Toast.LENGTH_SHORT).show();
+
+        //change pic after click button   set pic id,  get then set
+//        ImageView image = (ImageView) findViewById(R.id.catImageView);
+//        image.setImageResource(R.drawable.l2);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
