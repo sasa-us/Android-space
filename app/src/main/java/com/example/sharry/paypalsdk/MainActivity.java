@@ -1,14 +1,9 @@
-package com.example.sharrylu.layouttest;
+package com.example.sharry.paypalsdk;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
-    public void fade(View view) {
-        ImageView cup = (I)findViewById(R.id.cup);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
