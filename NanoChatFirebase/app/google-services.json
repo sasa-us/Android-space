@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "46472486249",
+    "firebase_url": "https://nanochatfirebase.firebaseio.com",
+    "project_id": "nanochatfirebase",
+    "storage_bucket": "nanochatfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46472486249:android:94851abc9552f177",
+        "android_client_info": {
+          "package_name": "com.example.sharry.nanochatfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46472486249-3d20vmucvt094gs7grrbnrunskib75o3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharry.nanochatfirebase",
+            "certificate_hash": "0fa6dad72812c88d96d66d7563ef2ceae6b7e9a5"
+          }
+        },
+        {
+          "client_id": "46472486249-0a0tu4rgffs1mh34o15evtrrmvvemicb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNNRPfakz2oc2Aste2zT2pEiCMLFoHOTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46472486249-0a0tu4rgffs1mh34o15evtrrmvvemicb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
