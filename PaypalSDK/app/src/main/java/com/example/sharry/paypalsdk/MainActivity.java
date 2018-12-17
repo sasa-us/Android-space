@@ -22,7 +22,8 @@ import java.math.BigDecimal;
 public class MainActivity extends AppCompatActivity {
 
     public static final int PAYPAL_REQUEST_CODE = 7171;
-    private static PayPalConfiguration config = new PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(Config.PAYPAL_CLIENT_ID);
+    private static PayPalConfiguration config = new PayPalConfiguration()
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(Config.PAYPAL_CLIENT_ID);
 
     Button btnPayNow;
     EditText edtAmount;
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         //start Paypal service
         Intent intent = new Intent(this, PayPalService.class);
@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void processPayment() {
         amount = edtAmount.getText().toString();
-        PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(String.valueOf(amount)), "USD", "sasa Donate", PayPalPayment.PAYMENT_INTENT_SALE);
+        PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(String.valueOf(amount)),
+                "USD", "sasa Donate", PayPalPayment.PAYMENT_INTENT_SALE);
 
         Intent intent = new Intent(this, PaymentActivity.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
@@ -73,11 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
             if(resultCode == RESULT_OK) {
                 PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-
                 if(confirmation != null) {
                     try {
                         String paymentDetails = confirmation.toJSONObject().toString(4);
-                        startActivity(new Intent(this, PaymentDetails.class).putExtra("PaymentDetails", paymentDetails).putExtra("PaymentAmount", amount)
+                        startActivity(new Intent(this, PaymentDetails.class)
+                                .putExtra("PaymentDetails", paymentDetails)
+                                .putExtra("PaymentAmount", amount)
                         );
                     } catch (JSONException e) {
                         e.printStackTrace();
